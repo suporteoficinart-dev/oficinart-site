@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="OFICINART: esculturas, action figures e vasos feitos à mão ou criados a partir da sua ideia.">
+<meta property="og:title" content="OFICINART">
+<meta property="og:description" content="Esculturas, action figures e vasos feitos à mão ou sob encomenda.">
+<meta property="og:url" content="https://www.oficinartshop.com.br/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b0b0c">
+<title>OFICINART · Esculturas, action figures e vasos</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Michroma&display=swap" rel="stylesheet">
+<style>
+/* Layout: abertura em couro com o logo em aço no centro, depois galeria e processo em faixa única escura */
+:root{--bg:#0b0b0c;--sf:#161617;--tx:#edebe6;--mut:#9a978f;--sand:#a8946b;--lum:#a9d8b8;--ln:#2c2c2e;--ink:#0b0b0c;--edge:#8e8e8a;--tick:#c9c9c4;
+--steel:linear-gradient(135deg,#e4e4df,#8e8e8a 55%,#d2d2cd);
+--d:'Michroma','Eurostile','Arial Black',sans-serif;--b:'Inter',system-ui,sans-serif;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth}
+body{margin:0}
+img{max-width:100%}
+body{background:var(--bg);color:var(--tx);font:400 16px/1.65 var(--b)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--lum);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--d);font-weight:400;margin:0;line-height:1.25;text-wrap:balance}
+h2{font-size:clamp(18px,3vw,26px);letter-spacing:.12em}
+p{margin:0;max-width:60ch}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding-block:14px}
+.mark{font:400 13px var(--d);letter-spacing:.3em;background:var(--steel);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none}
+.bar nav{display:flex;flex-wrap:wrap;gap:4px 20px}
+.bar nav a{font-size:14px;color:var(--mut);text-decoration:none;padding:6px 0}
+.bar nav a:hover{color:var(--tx)}
+
+.btn{display:inline-block;text-decoration:none;font:400 12px var(--d);letter-spacing:.18em;padding:16px 26px;border:1px solid var(--edge);transition:background .3s,color .3s}
+.btn.p{background:var(--steel);color:var(--ink);border-color:transparent}
+.btn:hover{background:var(--tx);color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Abertura */
+.hero{background:radial-gradient(ellipse at 50% 40%,#1c1c1d,var(--bg) 70%),repeating-conic-gradient(#ffffff08 0 25%,transparent 0 50%) 0 0/4px 4px;text-align:center}
+.hero .wrap{display:flex;flex-direction:column;align-items:center;gap:28px;padding-block:72px 88px}
+.emblem{position:relative;width:100%;display:grid;place-items:center;padding-block:clamp(32px,8vw,80px)}
+.emblem::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 50% 55% at 50% 50%,#ffffff12,transparent 70%);pointer-events:none}
+.logo{position:relative;font:400 clamp(26px,8.6vw,76px) var(--d);letter-spacing:.2em;margin-right:-.2em;line-height:1.1;
+background:linear-gradient(105deg,transparent 40%,#ffffffcc 50%,transparent 60%) -200% 0/250% 100% no-repeat,var(--steel);
+-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 0 #000) drop-shadow(0 18px 40px #000c);animation:shine 2.4s ease-out .4s both}
+@keyframes shine{from{background-position:-200% 0,0 0}to{background-position:250% 0,0 0}}
+.rule{width:min(40%,220px);height:1px;background:linear-gradient(90deg,transparent,var(--sand),transparent);margin-top:clamp(18px,3vw,28px)}
+.hero p{font-size:clamp(16px,2.2vw,18px);color:var(--tx)}
+.hero .cta{justify-content:center}
+
+section{padding-block:72px}
+.head{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;justify-content:space-between;margin-bottom:32px}
+.head a{font-size:14px;color:var(--mut)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--sf);border:1px solid var(--ln);display:block;text-decoration:none;transition:border-color .3s}
+.card:hover{border-color:var(--edge)}
+.card .ph{aspect-ratio:4/5;max-width:100%;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#2a2a2c,#101011 75%)}
+.card svg{width:44%;fill:none;stroke:var(--tick);stroke-width:1.2}
+.card .in{padding:18px;border-top:1px solid var(--ln);display:grid;gap:4px;justify-items:start}
+.card h3{font-size:13px;letter-spacing:.1em;margin-top:6px}
+.ref{font:400 11px var(--d);letter-spacing:.14em;color:var(--mut)}
+.pr{color:var(--sand);font-weight:500;font-variant-numeric:tabular-nums}
+.tag{display:inline-flex;align-items:center;font-size:12px;padding:3px 10px;border:1px solid currentColor}
+.ok{color:var(--lum)}.enc{color:var(--sand)}.vd{color:var(--mut)}
+.ok::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lum);margin-right:8px;animation:pl 2.4s ease-in-out infinite}
+@keyframes pl{50%{opacity:.35}}
+
+#projeto{border-top:1px solid var(--ln)}
+#projeto h2{margin-bottom:32px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-top:1px solid var(--ln);margin-bottom:28px}
+.steps div{padding:24px 20px 24px 0;display:grid;gap:8px;align-content:start}
+.steps span{font:400 28px var(--d);color:var(--sand)}
+.steps h3{font-size:13px;letter-spacing:.12em;margin-top:4px}
+.note{border:1px dashed var(--ln);padding:16px 20px;color:var(--mut);font-size:14px;margin-top:40px}
+footer{border-top:1px solid var(--ln);color:var(--mut);font-size:14px}
+footer .wrap{padding-block:40px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <a class="mark" href="#topo">OFICINART</a>
+  <nav aria-label="Seções"><a href="#galeria">Galeria</a><a href="#projeto">Encomendas</a><a href="#contato">Contato</a></nav>
+</div></div>
+
+<header class="hero" id="topo"><div class="wrap">
+  <div class="emblem"><h1 class="logo">OFICINART</h1><div class="rule" aria-hidden="true"></div></div>
+  <p>Precisão de ofício, alma de arte. Esculturas, action figures e vasos feitos à mão, ou criados a partir da sua ideia.</p>
+  <div class="cta"><a class="btn p" href="#galeria">Ver galeria</a><a class="btn" href="#projeto">Traga seu projeto</a></div>
+</div></header>
+
+<main>
+<section id="galeria"><div class="wrap">
+  <div class="head"><h2>EM DESTAQUE</h2><a href="#galeria">Ver todas as peças</a></div>
+  <div class="grid">
+    <a class="card" href="#galeria"><div class="ph"><svg viewBox="0 0 100 140" aria-hidden="true"><path d="M50 8c-14 0-20 14-18 30 2 14 12 18 12 30 0 14-16 18-16 40h44c0-22-16-26-16-40 0-12 10-16 12-30 2-16-4-30-18-30z"/></svg></div>
+      <div class="in"><span class="tag ok">Disponível</span><h3>Escultura exemplo</h3><div class="ref">REF. OA-0101</div><div class="pr">R$ 000,00</div></div></a>
+    <a class="card" href="#galeria"><div class="ph"><svg viewBox="0 0 100 140" aria-hidden="true"><circle cx="50" cy="26" r="14"/><path d="M30 48h40l6 40H24zM36 88l-4 44h14l4-30 4 30h14l-4-44"/></svg></div>
+      <div class="in"><span class="tag enc">Sob encomenda</span><h3>Action figure exemplo</h3><div class="ref">REF. OA-0102</div><div class="pr">R$ 000,00</div></div></a>
+    <a class="card" href="#galeria"><div class="ph"><svg viewBox="0 0 100 140" aria-hidden="true"><path d="M38 10h24v14c0 8 18 18 18 48 0 34-14 58-30 58S20 106 20 72c0-30 18-40 18-48z"/></svg></div>
+      <div class="in"><span class="tag vd">Vendida</span><h3>Vaso exemplo</h3><div class="ref">REF. OA-0103</div><div class="pr">R$ 000,00</div></div></a>
+  </div>
+</div></section>
+
+<section id="projeto"><div class="wrap">
+  <h2>COMO FUNCIONA A ENCOMENDA</h2>
+  <div class="steps">
+    <div><span>01</span><h3>IDEIA</h3><p>Você conta o que imagina e envia referências.</p></div>
+    <div><span>02</span><h3>ORÇAMENTO</h3><p>Respondemos com valor, prazo e condições.</p></div>
+    <div><span>03</span><h3>PRODUÇÃO</h3><p>Começamos após a sua aprovação e o sinal.</p></div>
+    <div><span>04</span><h3>ENTREGA</h3><p>Enviamos com código de rastreio.</p></div>
+  </div>
+  <div class="cta"><a class="btn p" href="#contato">Traga seu projeto</a></div>
+  <div class="note">Protótipo visual. Fotos, preços e peças são exemplos. Substitua o espaço das peças por fotos reais com fundo escuro e luz lateral.</div>
+</div></section>
+</main>
+
+<footer id="contato"><div class="wrap">OFICINART · Esculturas, action figures e vasos · Pix, cartão e boleto via Mercado Pago</div></footer>
+</body>
+</html>
